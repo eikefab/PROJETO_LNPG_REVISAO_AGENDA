@@ -38,9 +38,10 @@ window = Tk()
 
 window.title("Agenda")
 window.geometry("450x450")
+window.resizable(0, 0)
 
 frame = Frame(window, padding=30)
-frame.grid()
+frame.pack()
 
 nome = StringVar()
 telefone = StringVar()
@@ -80,9 +81,9 @@ def criar():
 
 botao = Button(frame, text="Criar", command=criar)
 
-nome_label.grid(column=0, row=1, padx=20, pady=10, sticky="W")
-telefone_label.grid(column=0, row=2, pady=10, sticky="W")
-email_label.grid(column=0, row=3, padx=20, pady=10, sticky="W")
+nome_label.grid(column=0, row=1, padx=5, pady=10, sticky="W")
+telefone_label.grid(column=0, row=2, padx=5, pady=10, sticky="W")
+email_label.grid(column=0, row=3, padx=5, pady=10, sticky="W")
 
 nome_entry.grid(column=1, row=1, padx=20, pady=10)
 telefone_entry.grid(column=1, row=2, padx=20, pady=10)
